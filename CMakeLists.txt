@@ -142,6 +142,7 @@ if(WILDMIDI)
 
 	# TODO - Add support for system library
 	#find_package(WildMidi)
+	find_library(WILDMID_LIBRARY WildMidi)
 
 	#if(NOT WildMidi-FOUND)
 		# Set and hide these internal options
@@ -152,10 +153,10 @@ if(WILDMIDI)
 		set(WANT_OSX_DEPLOYMENT OFF CACHE INTERNAL "" FORCE)
 		set(WANT_STATIC ON CACHE INTERNAL "" FORCE)
 
-		add_subdirectory("external/wildmidi" EXCLUDE_FROM_ALL)
+		add_subdirectory("external/wildmidi-0.4.5" EXCLUDE_FROM_ALL)
 	#endif()
 
-	target_link_libraries(clowndoom PRIVATE libwildmidi_static)
+	target_link_libraries(clowndoom PRIVATE libwildmidi-static m)
 endif()
 
 # Handle backends
