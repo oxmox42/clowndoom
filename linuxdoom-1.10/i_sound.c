@@ -486,6 +486,8 @@ static void StartupCallback(unsigned int _output_sample_rate, void *user_data)
 #ifdef WILDMIDI
     if (WildMidi_Init(wildmidi_config_path, output_sample_rate, 0) == 0)
         music_initialised = true;
+	else
+        fprintf(stderr, "I_StartupSound: Failed to initialize WildMIDI. Is %s missing?\n", wildmidi_config_path);
 #endif
 }
 
