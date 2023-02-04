@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.19)
 
 project(clowndoom LANGUAGES C)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(BACKEND "SDL2" CACHE STRING "Which backend to use: Xlib, SDL1, or SDL2")
 option(WILDMIDI "Render MIDI using the WildMIDI library" ON)
 
