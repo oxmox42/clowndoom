@@ -1,3 +1,8 @@
-/linuxdoom-1.10/linux
-/build
+build*/
+.cache/
+.clangd/
+.cmake/
+CMakeLists.txt.user*
+linuxdoom-1.10/linux
 **/*.sw?
+.vscode/
